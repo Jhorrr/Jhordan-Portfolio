@@ -217,6 +217,14 @@
     background-size: cover;
     }
 
+div#nose{
+            background-color: rgba(10, 10, 10, 0.45);
+            backdrop-filter: blur(10px);
+            border: solid rgba(255, 255, 255, 0.055) 1px;
+            border-radius: 10px;
+            padding: 20px 85px;
+        }
+
         .hero {
     min-height: 100vh;
     display: flex;
@@ -641,4 +649,5 @@ div.container > h2.section__title {
             .ad-grid {
                 grid-template-columns: 1fr;
             }
+
         }
