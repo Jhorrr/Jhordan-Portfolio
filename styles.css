@@ -213,7 +213,7 @@
         /* ==================== HERO SECTION ==================== */
 
 #home {
-    background-image: url(hero1.png);
+    background-image: url(hero2.jpg);
     background-size: cover;
     }
 
@@ -338,7 +338,7 @@
         
         /* ADVERTISEMENT GRID - Square images */
         .ad-grid {
-            display: grid;
+            display: grid important!;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--spacing-md);
         }
@@ -650,5 +650,6 @@ div.container > h2.section__title {
                 grid-template-columns: 1fr;
             }
         }
+
 
     
