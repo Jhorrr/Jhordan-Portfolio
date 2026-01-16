@@ -339,6 +339,7 @@ div#nose{
         /* ADVERTISEMENT GRID - Square images */
         .ad-grid {
             display: grid;
+                display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: var(--spacing-md);
         }
@@ -651,3 +652,4 @@ div.container > h2.section__title {
             }
 
         }
+
