@@ -526,14 +526,14 @@ div.container > h2.section__title {
 
 .contacto__text {
     font-size: var(--text-md);
-    color: #8f8f8f;
+    color: #F1F1F1;
     margin-bottom: var(--spacing-md);
     line-height: 1.8;
 }
 
 .contacto__text2 {
     font-size: 1rem;
-    color: #F1F1F1;
+    color: #B1B1B1;
     margin-bottom: 32px;
     line-height: 1.8;
 }
@@ -542,7 +542,7 @@ div.container > h2.section__title {
     display: inline-block;
     font-size: var(--text-lg);
     font-weight: 600;
-    color: #B1B1B1;
+    color: #eeb020;
     margin-bottom: var(--spacing-md);
     transition: var(--transition);
 }
@@ -660,6 +660,7 @@ div.container > h2.section__title {
 
 
     
+
 
 
 
