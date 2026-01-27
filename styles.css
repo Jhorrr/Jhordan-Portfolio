@@ -526,7 +526,14 @@ div.container > h2.section__title {
 
 .contacto__text {
     font-size: var(--text-md);
-    color: var(--color-text-secondary);
+    color: #f1f1f1;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.contacto__text2 {
+    font-size: 1rem;
+    color: #8f8f8f;
     margin-bottom: var(--spacing-md);
     line-height: 1.8;
 }
@@ -653,4 +660,5 @@ div.container > h2.section__title {
 
 
     
+
 
