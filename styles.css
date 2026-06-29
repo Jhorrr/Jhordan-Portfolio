@@ -857,3 +857,35 @@ div.container>h2.section__title {
     display:block;
     object-fit:cover;
 }
+
+
+
+
+
+.myCarousel{
+    position:relative;
+}
+
+.myCarousel button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.6);
+    opacity: 25%;
+    color:#fff;
+    font-size:22px;
+    cursor:pointer;
+    z-index:9999;
+}
+
+.btnPrev{
+    left:12px;
+}
+
+.btnNext{
+    right:12px;
+}
