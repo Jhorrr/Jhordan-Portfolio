@@ -317,9 +317,17 @@
                     <div class="sport-item">
                         <img src="Posters/vardy2WEB.jpg" alt="Sport 3">
                     </div>
+                    
                     <div class="sport-item">
-                        <img src="Posters/vargasWEB.jpg" alt="Sport 4">
+                        <img src="Posters/peru-matchdyweb.jpg" alt="Sport 2">
                     </div>
+
+                    <div class="sport-item myCarousel">
+                        <img id="img1" src="Posters/zazaWEB.jpg">
+                        <button class="btnPrev">❮</button>
+                        <button class="btnNext">❯</button>
+                    </div>
+                    
                     <div class="sport-item">
                         <img src="Posters/PosterAviatorWEB.jpg" alt="Sport 4">
                     </div>
@@ -488,6 +496,47 @@
         });
 
     });
+
+
+    
+    const imagenes1 = [
+    "Posters/zazaWEB.jpg",
+    "Posters/messiWEB.jpg",
+    "Posters/vargasWEB.jpg",
+    "Posters/HuijsenVf.jpg",
+    "Posters/Reus06F.jpg",
+    "Posters/AntonyVF.jpg",
+    "Posters/zlatanF.jpg"
+];
+
+let indice1 = 0;
+
+const img1 = document.getElementById("img1");
+
+document.querySelector(".btnNext").addEventListener("click", function(){
+
+    indice1++;
+
+    if(indice1 >= imagenes1.length){
+        indice1 = 0;
+    }
+
+    img1.src = imagenes1[indice1];
+
+});
+
+document.querySelector(".btnPrev").addEventListener("click", function(){
+
+    indice1--;
+
+    if(indice1 < 0){
+        indice1 = imagenes1.length - 1;
+    }
+
+    img1.src = imagenes1[indice1];
+
+});
+    
 
     </script>
 
