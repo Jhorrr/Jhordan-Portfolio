@@ -889,3 +889,94 @@ div.container>h2.section__title {
 .btnNext{
     right:12px;
 }
+
+
+
+
+
+
+/* ===========================
+   CARRUSEL SIMPLE
+=========================== */
+
+.myCarousel{
+    position:relative;
+    overflow:hidden;
+}
+
+.myCarousel img{
+    width:100%;
+    height:auto;
+    display:block;
+    transition:opacity .5s ease;
+}
+
+.myCarousel img.fade{
+    opacity:0;
+}
+
+/* BOTONES */
+
+.myCarousel button{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:42px;
+    height:42px;
+    border:none;
+    border-radius:50%;
+    background:rgba(0,0,0,.45);
+    color:#fff;
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+    z-index:9999;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    /* Ocultos por defecto */
+    opacity:0;
+
+    transition:
+        opacity .25s ease,
+        background .25s ease,
+        transform .25s ease,
+        left .25s ease,
+        right .25s ease;
+}
+
+/* Aparecen al pasar el mouse */
+
+.myCarousel:hover button{
+    opacity:1;
+}
+
+/* Hover del botón */
+
+.myCarousel button:hover{
+    background:rgba(0,0,0,.75);
+    transform:translateY(-50%) scale(1.08);
+}
+
+/* Posición inicial (más pegadas al borde) */
+
+.btnPrev{
+    left:2px;
+}
+
+.btnNext{
+    right:2px;
+}
+
+/* Se deslizan un poco hacia adentro */
+
+.myCarousel:hover .btnPrev{
+    left:12px;
+}
+
+.myCarousel:hover .btnNext{
+    right:12px;
+}
+
