@@ -495,6 +495,7 @@
 
 
     
+
     const imagenes1 = [
     "Posters/zazaWEB.jpg",
     "Posters/messiWEB.jpg",
@@ -505,32 +506,84 @@
     "Posters/zlatanF.jpg"
 ];
 
+// Precargar imágenes
+imagenes1.forEach(src => {
+    const preload = new Image();
+    preload.src = src;
+});
+
 let indice1 = 0;
 
 const img1 = document.getElementById("img1");
+const carrusel = document.querySelector(".myCarousel");
 
-document.querySelector(".btnNext").addEventListener("click", function(){
+function mostrarImagen() {
+
+    img1.classList.add("fade");
+
+    setTimeout(() => {
+
+        img1.src = imagenes1[indice1];
+
+        img1.onload = () => {
+            img1.classList.remove("fade");
+        };
+
+    }, 250);
+
+}
+
+function siguienteImagen() {
 
     indice1++;
 
-    if(indice1 >= imagenes1.length){
+    if (indice1 >= imagenes1.length) {
         indice1 = 0;
     }
 
-    img1.src = imagenes1[indice1];
+    mostrarImagen();
 
-});
+}
 
-document.querySelector(".btnPrev").addEventListener("click", function(){
+function anteriorImagen() {
 
     indice1--;
 
-    if(indice1 < 0){
+    if (indice1 < 0) {
         indice1 = imagenes1.length - 1;
     }
 
-    img1.src = imagenes1[indice1];
+    mostrarImagen();
 
+}
+
+// Flechas
+document.querySelector(".btnNext").addEventListener("click", () => {
+    siguienteImagen();
+    reiniciarAutoplay();
+});
+
+document.querySelector(".btnPrev").addEventListener("click", () => {
+    anteriorImagen();
+    reiniciarAutoplay();
+});
+
+// Autoplay
+let autoplay = setInterval(siguienteImagen, 2500);
+
+function reiniciarAutoplay() {
+    clearInterval(autoplay);
+    autoplay = setInterval(siguienteImagen, 2500);
+}
+
+// Pausar cuando el mouse está encima
+carrusel.addEventListener("mouseenter", () => {
+    clearInterval(autoplay);
+});
+
+// Reanudar cuando el mouse sale
+carrusel.addEventListener("mouseleave", () => {
+    reiniciarAutoplay();
 });
     
 
